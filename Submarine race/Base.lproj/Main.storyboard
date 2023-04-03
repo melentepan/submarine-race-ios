@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7HM-FJ-fBP">
+    <device id="retina6_72" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="BQM-9M-yrI">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="7HM-FJ-fBP" customClass="GameViewController" customModule="Submarine_race" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qi3-YK-OQT">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uyI-dE-19m" userLabel="SkyView">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="116.66666666666667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sky" translatesAutoresizingMaskIntoConstraints="NO" id="ogg-f2-wDJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="932" height="116.66666666666667"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstItem="ogg-f2-wDJ" firstAttribute="leading" secondItem="uyI-dE-19m" secondAttribute="leading" id="1Rw-vd-GTI"/>
+                                    <constraint firstAttribute="width" secondItem="uyI-dE-19m" secondAttribute="height" multiplier="8:1" id="5Av-La-fe1"/>
+                                    <constraint firstItem="ogg-f2-wDJ" firstAttribute="top" secondItem="uyI-dE-19m" secondAttribute="top" id="7XL-at-43T"/>
+                                    <constraint firstAttribute="trailing" secondItem="ogg-f2-wDJ" secondAttribute="trailing" id="Zz9-BY-dt3"/>
+                                    <constraint firstAttribute="bottom" secondItem="ogg-f2-wDJ" secondAttribute="bottom" id="jLW-Eu-bUQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opz-aG-Aw8" userLabel="BottomView">
+                                <rect key="frame" x="0.0" y="371.66666666666669" width="932" height="58.333333333333314"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-oM-aY4">
+                                        <rect key="frame" x="0.0" y="0.0" width="932" height="58.333333333333336"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Opz-aG-Aw8" secondAttribute="height" multiplier="16:1" id="Q5a-cl-PDk"/>
+                                    <constraint firstAttribute="trailing" secondItem="2UI-oM-aY4" secondAttribute="trailing" id="eQR-lt-esD"/>
+                                    <constraint firstAttribute="bottom" secondItem="2UI-oM-aY4" secondAttribute="bottom" id="g5j-jR-rCg"/>
+                                    <constraint firstItem="2UI-oM-aY4" firstAttribute="top" secondItem="Opz-aG-Aw8" secondAttribute="top" id="vMg-Rd-KdU"/>
+                                    <constraint firstItem="2UI-oM-aY4" firstAttribute="leading" secondItem="Opz-aG-Aw8" secondAttribute="leading" id="y08-Ep-adX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfz-CR-MVK" userLabel="WaterView">
+                                <rect key="frame" x="0.0" y="116.66666666666669" width="932" height="255"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="0gI-wn-NLC">
+                                        <rect key="frame" x="0.0" y="0.0" width="932" height="255"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0gI-wn-NLC" secondAttribute="bottom" id="90M-22-Rdg"/>
+                                    <constraint firstItem="0gI-wn-NLC" firstAttribute="leading" secondItem="gfz-CR-MVK" secondAttribute="leading" id="JEv-NA-cHc"/>
+                                    <constraint firstAttribute="trailing" secondItem="0gI-wn-NLC" secondAttribute="trailing" id="LMY-LJ-lyJ"/>
+                                    <constraint firstItem="0gI-wn-NLC" firstAttribute="top" secondItem="gfz-CR-MVK" secondAttribute="top" id="s2u-PH-2nf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D0D-pI-oGW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfz-CR-MVK" firstAttribute="top" secondItem="uyI-dE-19m" secondAttribute="bottom" id="ASG-Ay-kk3"/>
+                            <constraint firstItem="gfz-CR-MVK" firstAttribute="leading" secondItem="Qi3-YK-OQT" secondAttribute="leading" id="Abi-cK-uGL"/>
+                            <constraint firstAttribute="trailing" secondItem="gfz-CR-MVK" secondAttribute="trailing" id="EfQ-2J-fNh"/>
+                            <constraint firstAttribute="bottom" secondItem="Opz-aG-Aw8" secondAttribute="bottom" id="PaQ-fj-aQc"/>
+                            <constraint firstAttribute="trailing" secondItem="Opz-aG-Aw8" secondAttribute="trailing" id="TlF-e4-Nw0"/>
+                            <constraint firstItem="Opz-aG-Aw8" firstAttribute="leading" secondItem="Qi3-YK-OQT" secondAttribute="leading" id="dBQ-iH-wBe"/>
+                            <constraint firstItem="Opz-aG-Aw8" firstAttribute="top" secondItem="gfz-CR-MVK" secondAttribute="bottom" id="flU-PR-Agl"/>
+                            <constraint firstItem="uyI-dE-19m" firstAttribute="top" secondItem="Qi3-YK-OQT" secondAttribute="top" id="mrL-7d-ViI"/>
+                            <constraint firstAttribute="trailing" secondItem="uyI-dE-19m" secondAttribute="trailing" id="p7E-fx-rG7"/>
+                            <constraint firstItem="uyI-dE-19m" firstAttribute="leading" secondItem="Qi3-YK-OQT" secondAttribute="leading" id="qqG-uX-Jmq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="waterView" destination="gfz-CR-MVK" id="qGf-wY-EjH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s20-w1-tdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom" width="2666.666748046875" height="166.66667175292969"/>
+        <image name="sky" width="266.66665649414062" height="33.333332061767578"/>
+        <image name="water" width="1333.3333740234375" height="333.33334350585938"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
